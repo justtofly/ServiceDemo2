@@ -17,8 +17,14 @@
         </activity>
         <activity android:name=".ServiceActivity"/>
         <activity android:name=".ServiceActivity2"/>
+        <activity android:name=".ServiceActivity3"/>
+
         <service android:name="com.fi.service.TestService"/>
         <service android:name="com.fi.service.TestService2"/>
+        <service android:name="com.fi.service.TestService3"/>
+
+        <activity android:name=".DetailActivity">
+        </activity>
     </application>
 
 </manifest>
