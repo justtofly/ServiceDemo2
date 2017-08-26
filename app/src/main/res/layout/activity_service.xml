@@ -35,5 +35,13 @@
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:text="解绑服务"/>
+    <Button
+        android:id="@+id/get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="调用服务里面的方法"/>
 
 </LinearLayout>

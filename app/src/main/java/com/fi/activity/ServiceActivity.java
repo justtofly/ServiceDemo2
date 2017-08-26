@@ -28,7 +28,10 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
     private Button stop;
     private Button bind;
     private Button unbind;
+    private Button get;
     private static final String TAG = ServiceActivity.class.getSimpleName();
+
+    private TestService.MyBinder mMyBinder;
 
     //创建服务连接对象
     private MyConn conn = new MyConn();
@@ -47,6 +50,7 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
         stop.setOnClickListener(this);
         bind.setOnClickListener(this);
         unbind.setOnClickListener(this);
+        get.setOnClickListener(this);
     }
 
     //实例化控件
@@ -55,19 +59,23 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
         stop = (Button) findViewById(R.id.stop);
         bind = (Button) findViewById(R.id.bind);
         unbind = (Button) findViewById(R.id.unbind);
+        get= (Button) findViewById(R.id.get);
     }
 
     public class MyConn implements ServiceConnection {
 
 
+        //当服务被连接的时候调用的方法,相当于和中间人搭上了话
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.e("TestService", "服务被绑定了...........");
+            Log.e("TestService", "4.代理人成功返回过来，得到代理人对象,iBinder:"+service.toString());
+            mMyBinder= (TestService.MyBinder) service;
         }
 
+        //当服务失去连接的时候调用的方法
         @Override
         public void onServiceDisconnected(ComponentName name) {
-
+            Log.e("TestService", "服务失去连接了...........");
         }
     }
 
@@ -76,7 +84,9 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.open:
                 //开启服务
+                //采用start的方式开启服务，返回值不是服务的引用，无法调用服务里面的方法
                 Intent intent1 = new Intent(this, TestService.class);
+                //Android框架把服务给开启了，它把上下文信息交给了服务对象
                 startService(intent1);
                 break;
             case R.id.stop:
@@ -84,8 +94,23 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
                 Intent intent2 = new Intent(this, TestService.class);
                 stopService(intent2);
                 break;
+            //调用服务里面的方法
+            case R.id.get:
+                //得到服务的引用对象，不是一个服务的类了，把它当成了一个普通的方法，脱离了框架，就得不到框架的上下文引用。
+                ////换成一个吐司,会报空指针异常，因为在这里，this上下文不存在
+//                TestService ts=new TestService();
+//                ts.methodInService();
+                Log.e("TestService","5.调用服务里面代理人的方法");
+                mMyBinder.callMethodInService(8000);
+                break;
+            //绑定服务
             case R.id.bind:
                 Intent intent3 = new Intent(this, TestService.class);
+                /**
+                 * 第二个参数是一个接口，就要把这个接口的实现类给创建出来，conn,用来接收服务开启和停止的消息
+                 * BIND_AUTO_CREATE,绑定服务的时候，如果服务不存在会自动地把服务创建出来
+                 */
+                Log.e("TestService","1.采用绑定的方式开启服务,bindService");
                 bindService(intent3, conn, BIND_AUTO_CREATE);
                 break;
             case R.id.unbind:
