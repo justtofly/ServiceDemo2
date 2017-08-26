@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainActivity extends Activity implements View.OnClickListener {
     //声明控件
     private Button btn1;
+    private Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
     //设置监听
     private void initListener() {
         btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
     }
 
     //初始化控件
     private void initView() {
         btn1= (Button) findViewById(R.id.btn1);
+        btn2= (Button) findViewById(R.id.btn2);
     }
 
     @Override
@@ -33,6 +36,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btn1:
                 startActivity(new Intent(this,ServiceActivity.class));
+                break;
+            case R.id.btn2:
+                startActivity(new Intent(this,ServiceActivity2.class));
                 break;
             default:
                 break;

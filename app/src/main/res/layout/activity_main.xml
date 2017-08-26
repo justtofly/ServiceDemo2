@@ -29,5 +29,13 @@
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:text="Service生命周期"/>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="采用接口暴露服务里面的方法"/>
 
 </LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+        android:id="@+id/open2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="开启服务"/>
+    <Button
+        android:id="@+id/stop2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="停止服务"/>
+    <Button
+        android:id="@+id/bind2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="绑定服务"/>
+    <Button
+        android:id="@+id/unbind2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="解绑服务"/>
+    <Button
+        android:id="@+id/get2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="采用接口暴露服务里面的方法"/>
+
+</LinearLayout>
