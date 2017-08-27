@@ -53,5 +53,13 @@
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:text="服务的更多高级使用技巧:IntentService"/>
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="服务的最佳实践:后台执行的定时任务"/>
 
 </LinearLayout>

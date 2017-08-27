@@ -23,10 +23,15 @@
         <service android:name="com.fi.service.TestService2"/>
         <service android:name="com.fi.service.TestService3"/>
         <service android:name="com.fi.service.MyIntentService"/>
+        <service android:name="com.fi.service.LongRunningService"/>
+
+        <receiver android:name="com.fi.receiver.AlarmReceiver"/>
 
         <activity android:name=".DetailActivity">
         </activity>
         <activity android:name=".IntentServiceActivity">
+        </activity>
+        <activity android:name=".AlarmServiceActivity">
         </activity>
     </application>
 

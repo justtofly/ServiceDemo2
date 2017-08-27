@@ -28,6 +28,13 @@ public class TestService extends Service {
         super.onCreate();
     }
 
+    //这个方法已经过时
+    @Override
+    public void onStart(Intent intent, int startId) {
+        super.onStart(intent, startId);
+        Log.e(TAG, "onStart,过时方法");
+    }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.e(TAG, "onStartCommand");

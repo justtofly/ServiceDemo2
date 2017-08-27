@@ -12,6 +12,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button btn2;
     private Button btn3;
     private Button btn4;
+    private Button btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
     }
 
     //初始化控件
@@ -35,6 +37,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn2= (Button) findViewById(R.id.btn2);
         btn3= (Button) findViewById(R.id.btn3);
         btn4= (Button) findViewById(R.id.btn4);
+        btn5= (Button) findViewById(R.id.btn5);
     }
 
     @Override
@@ -51,6 +54,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn4:
                 startActivity(new Intent(this,IntentServiceActivity.class));
+                break;
+            case R.id.btn5:
+                startActivity(new Intent(this,AlarmServiceActivity.class));
                 break;
             default:
                 break;
