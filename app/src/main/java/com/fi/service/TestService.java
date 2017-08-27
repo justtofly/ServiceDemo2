@@ -24,12 +24,14 @@ public class TestService extends Service {
     @Override
     public void onCreate() {
         Log.e(TAG, "onCreate");
+        Toast.makeText(this, "onCreate()方法被回调", Toast.LENGTH_SHORT).show();
         super.onCreate();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.e(TAG, "onStartCommand");
+        Toast.makeText(this, "onStartCommand()方法被回调", Toast.LENGTH_SHORT).show();
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -46,6 +48,7 @@ public class TestService extends Service {
     @Override
     public void onDestroy() {
         Log.e(TAG, "onDestroy");
+        Toast.makeText(this, "onDestroy()方法被回调", Toast.LENGTH_SHORT).show();
         super.onDestroy();
     }
 
@@ -71,6 +74,7 @@ public class TestService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
+        Toast.makeText(this, "onBind()方法被回调，返回一个IBinder代理人对象", Toast.LENGTH_SHORT).show();
         Log.e(TAG, "2.如果服务被成功绑定，就会调用onBind方法，返回一个IBinder代理人对象,onBind方法");
         MyBinder myBinder=new MyBinder();
         Log.e(TAG,"3.new出来代理人对象"+myBinder.toString());
@@ -80,6 +84,7 @@ public class TestService extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
+        Toast.makeText(this, "onUnbind()方法被回调", Toast.LENGTH_SHORT).show();
         Log.e(TAG, "onUnbind");
         return super.onUnbind(intent);
     }

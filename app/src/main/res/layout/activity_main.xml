@@ -45,5 +45,13 @@
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:text="服务的更多高级使用技巧:前台服务"/>
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:text="服务的更多高级使用技巧:IntentService"/>
 
 </LinearLayout>

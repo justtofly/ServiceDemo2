@@ -22,8 +22,11 @@
         <service android:name="com.fi.service.TestService"/>
         <service android:name="com.fi.service.TestService2"/>
         <service android:name="com.fi.service.TestService3"/>
+        <service android:name="com.fi.service.MyIntentService"/>
 
         <activity android:name=".DetailActivity">
+        </activity>
+        <activity android:name=".IntentServiceActivity">
         </activity>
     </application>
 
