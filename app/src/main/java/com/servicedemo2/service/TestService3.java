@@ -1,4 +1,4 @@
-package com.fi.service;
+package com.servicedemo2.service;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -12,8 +12,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fi.activity.DetailActivity;
-import com.fi.activity.IService3;
+import com.servicedemo2.activity.DetailActivity;
+import com.servicedemo2.activity.IService3;
 import com.fi.activity.R;
 
 /**

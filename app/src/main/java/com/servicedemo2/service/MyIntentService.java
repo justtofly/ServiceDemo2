@@ -1,4 +1,4 @@
-package com.fi.service;
+package com.servicedemo2.service;
 
 import android.app.IntentService;
 import android.content.Intent;

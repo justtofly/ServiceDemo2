@@ -1,4 +1,4 @@
-package com.fi.activity;
+package com.servicedemo2.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.fi.service.MyIntentService;
+import com.fi.activity.R;
+import com.servicedemo2.service.MyIntentService;
 
 public class IntentServiceActivity extends AppCompatActivity implements View.OnClickListener {
     //声明控件

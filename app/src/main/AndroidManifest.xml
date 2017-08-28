@@ -8,30 +8,30 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.servicedemo2.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ServiceActivity"/>
-        <activity android:name=".ServiceActivity2"/>
-        <activity android:name=".ServiceActivity3"/>
+        <activity android:name="com.servicedemo2.activity.ServiceActivity"/>
+        <activity android:name="com.servicedemo2.activity.ServiceActivity2"/>
+        <activity android:name="com.servicedemo2.activity.ServiceActivity3"/>
 
-        <service android:name="com.fi.service.TestService"/>
-        <service android:name="com.fi.service.TestService2"/>
-        <service android:name="com.fi.service.TestService3"/>
-        <service android:name="com.fi.service.MyIntentService"/>
-        <service android:name="com.fi.service.LongRunningService"/>
+        <service android:name="com.servicedemo2.service.TestService"/>
+        <service android:name="com.servicedemo2.service.TestService2"/>
+        <service android:name="com.servicedemo2.service.TestService3"/>
+        <service android:name="com.servicedemo2.service.MyIntentService"/>
+        <service android:name="com.servicedemo2.service.LongRunningService"/>
 
-        <receiver android:name="com.fi.receiver.AlarmReceiver"/>
+        <receiver android:name="com.servicedemo2.receiver.AlarmReceiver"/>
 
-        <activity android:name=".DetailActivity">
+        <activity android:name="com.servicedemo2.activity.DetailActivity">
         </activity>
-        <activity android:name=".IntentServiceActivity">
+        <activity android:name="com.servicedemo2.activity.IntentServiceActivity">
         </activity>
-        <activity android:name=".AlarmServiceActivity">
+        <activity android:name="com.servicedemo2.activity.AlarmServiceActivity">
         </activity>
     </application>
 

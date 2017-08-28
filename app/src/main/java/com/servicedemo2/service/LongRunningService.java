@@ -1,4 +1,4 @@
-package com.fi.service;
+package com.servicedemo2.service;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -9,7 +9,7 @@ import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.fi.receiver.AlarmReceiver;
+import com.servicedemo2.receiver.AlarmReceiver;
 
 import java.util.Date;
 

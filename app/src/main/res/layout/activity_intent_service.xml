@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fi.activity.IntentServiceActivity">
+    tools:context="com.servicedemo2.activity.IntentServiceActivity">
     <Button
         android:id="@+id/btn_intent_service"
         android:layout_width="match_parent"

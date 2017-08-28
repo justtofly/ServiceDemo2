@@ -1,4 +1,4 @@
-package com.fi.activity;
+package com.servicedemo2.activity;
 
 /**
  * 创建者     yangyanfei
@@ -10,7 +10,7 @@ package com.fi.activity;
  * 更新时间   $$Date$$
  * 更新描述   ${TODO}
  */
-public interface IService {
+public interface IService3 {
     /**
      * 接口定义可以调用的方法，办正事,我只需要知道你这个接口暴露的方法，不需要知道具体的内部实现
      * @param money

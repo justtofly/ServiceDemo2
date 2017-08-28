@@ -1,4 +1,4 @@
-package com.fi.service;
+package com.servicedemo2.service;
 
 import android.app.Service;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fi.activity.IService;
+import com.servicedemo2.activity.IService;
 
 /**
  * 创建者     yangyanfei

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fi.activity.MainActivity">
+    tools:context="com.servicedemo2.activity.MainActivity">
 
     <LinearLayout
         android:background="#ff0000"

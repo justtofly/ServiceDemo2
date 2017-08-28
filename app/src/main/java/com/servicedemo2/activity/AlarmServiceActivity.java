@@ -1,4 +1,4 @@
-package com.fi.activity;
+package com.servicedemo2.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.fi.service.LongRunningService;
+import com.fi.activity.R;
+import com.servicedemo2.service.LongRunningService;
 
 //后台执行定时任务
 public class AlarmServiceActivity extends Activity implements View.OnClickListener {
